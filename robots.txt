@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Security disclosure policy (RFC 9116)
+# https://rimorlabs.eu/.well-known/security.txt
+
+Sitemap: https://rimorlabs.eu/sitemap.xml

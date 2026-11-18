@@ -1,0 +1,11 @@
+# RIMOR Labs — Vulnerability Disclosure Policy (RFC 9116)
+# Probing beneath the surface. Securing what matters.
+
+Contact: mailto:security@rimorlabs.eu
+Contact: https://rimorlabs.eu/#contact
+Expires: 2027-12-31T23:59:59.000Z
+Encryption: openpgp4fpr:9F4A8C2E7D11B5034E9A1C88B205D7E4C9013FA2
+Preferred-Languages: en, fr, nl, de
+Canonical: https://rimorlabs.eu/.well-known/security.txt
+Policy: https://rimorlabs.eu/#contact
+Hiring: https://rimorlabs.eu/#contact

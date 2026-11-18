@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Netlify CLI & local build state
+.netlify/
+
+# Node / Optional local tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDEs and editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary & coverage files
+*.log
+.cache/
+dist/
+coverage/

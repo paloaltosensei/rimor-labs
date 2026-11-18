@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none" role="img" aria-label="RIMOR Labs — Probing beneath the surface. Securing what matters.">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#090b14" />
+      <stop offset="55%" stop-color="#0d1122" />
+      <stop offset="100%" stop-color="#090b14" />
+    </linearGradient>
+    <radialGradient id="reconBeam" cx="72%" cy="48%" r="48%">
+      <stop offset="0%" stop-color="#8b6cff" stop-opacity="0.28" />
+      <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#090b14" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="shieldBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b6cff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <pattern id="tacticalGrid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#232846" stroke-width="1" stroke-opacity="0.55" />
+    </pattern>
+  </defs>
+
+  <!-- Deep Obsidian Base -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#tacticalGrid)" />
+  <rect width="1200" height="630" fill="url(#reconBeam)" />
+
+  <!-- Outer Frame -->
+  <rect x="36" y="36" width="1128" height="558" rx="16" fill="#111528" fill-opacity="0.52" stroke="#232846" stroke-width="1.5" />
+
+  <!-- Radar / Recon Rings on Right -->
+  <g transform="translate(895, 315)">
+    <circle cx="0" cy="0" r="210" stroke="#232846" stroke-width="1.2" stroke-dasharray="6 6" />
+    <circle cx="0" cy="0" r="150" stroke="#8b6cff" stroke-opacity="0.35" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="92" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="-230" y1="0" x2="230" y2="0" stroke="#232846" stroke-width="1" />
+    <line x1="0" y1="-230" x2="0" y2="230" stroke="#232846" stroke-width="1" />
+    <!-- Subsurface Depth-Probe Emblem Center -->
+    <path d="M-42 -70H42L70 -42V42L42 70H-42L-70 42V-42L-42 -70Z" fill="#090b14" stroke="url(#shieldBorder)" stroke-width="3" />
+    <path d="M-46 -22H-18L-8 -12M46 -22H18L8 -12" stroke="#9ca0ba" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M-40 0H-16L-6 10M40 0H16L6 10" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+    <path d="M-32 22H-14L-5 31M32 22H14L5 31" stroke="#8b6cff" stroke-width="4" stroke-linecap="round" />
+    <path d="M0 -50V28" stroke="url(#shieldBorder)" stroke-width="5" stroke-linecap="round" />
+    <path d="M0 42L-12 22H12L0 42Z" fill="#38bdf8" />
+    <circle cx="0" cy="34" r="5" fill="#eef0f8" />
+    <!-- Orbiting Signal Nodes -->
+    <circle cx="-106" cy="-106" r="6" fill="#ff5d73" />
+    <circle cx="132" cy="-70" r="6" fill="#38bdf8" />
+    <circle cx="105" cy="108" r="6" fill="#10b981" />
+    <circle cx="-138" cy="58" r="6" fill="#8b6cff" />
+  </g>
+
+  <!-- Top Eyebrow Pill -->
+  <g transform="translate(84, 88)">
+    <rect x="0" y="0" width="446" height="38" rx="19" fill="#090b14" stroke="#232846" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="5" fill="#10b981" />
+    <text x="38" y="24" fill="#eef0f8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="600" letter-spacing="1.4">RIMOR LABS // PRE-LAUNCH BRIEFINGS OPEN</text>
+  </g>
+
+  <!-- Main Brand Headline -->
+  <text x="84" y="218" fill="#eef0f8" font-family="system-ui, -apple-system, sans-serif" font-size="62" font-weight="800" letter-spacing="-1.8">Probing beneath</text>
+  <text x="84" y="290" fill="#eef0f8" font-family="system-ui, -apple-system, sans-serif" font-size="62" font-weight="800" letter-spacing="-1.8">the surface.</text>
+  <text x="84" y="362" fill="#8b6cff" font-family="system-ui, -apple-system, sans-serif" font-size="58" font-weight="800" letter-spacing="-1.6">Securing what matters.</text>
+
+  <!-- Subtitle -->
+  <text x="84" y="424" fill="#9ca0ba" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400">Senior-led Offensive Security, Detection Engineering, Zero-Trust</text>
+  <text x="84" y="456" fill="#9ca0ba" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400">Architecture &amp; European Cyber Governance (NIS2 · DORA · ISO 27001 · vCISO)</text>
+
+  <!-- Domain Badges Row -->
+  <g transform="translate(84, 502)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="600">
+    <rect x="0" y="0" width="160" height="36" rx="6" fill="#090b14" stroke="#ff5d73" stroke-opacity="0.55" />
+    <circle cx="18" cy="18" r="4" fill="#ff5d73" />
+    <text x="32" y="23" fill="#eef0f8">[RED::OFFENSE]</text>
+
+    <rect x="176" y="0" width="170" height="36" rx="6" fill="#090b14" stroke="#38bdf8" stroke-opacity="0.55" />
+    <circle cx="194" cy="18" r="4" fill="#38bdf8" />
+    <text x="208" y="23" fill="#eef0f8">[BLUE::DETECT]</text>
+
+    <rect x="362" y="0" width="180" height="36" rx="6" fill="#090b14" stroke="#8b6cff" stroke-opacity="0.55" />
+    <circle cx="380" cy="18" r="4" fill="#8b6cff" />
+    <text x="394" y="23" fill="#eef0f8">[ARCH::ZEROTRUST]</text>
+
+    <rect x="558" y="0" width="176" height="36" rx="6" fill="#090b14" stroke="#10b981" stroke-opacity="0.55" />
+    <circle cx="576" cy="18" r="4" fill="#10b981" />
+    <text x="590" y="23" fill="#eef0f8">[GRC::NIS2/ISO]</text>
+  </g>
+</svg>

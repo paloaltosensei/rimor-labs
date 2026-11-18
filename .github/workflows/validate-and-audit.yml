@@ -1,0 +1,134 @@
+name: Validate Static Bundle & Security Posture
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-audit:
+    name: Repository, Netlify Forms & Security Header Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 1. Verify required directory and file structure
+        run: |
+          set -euo pipefail
+          REQUIRED_PATHS=(
+            ".github/workflows/validate-and-audit.yml"
+            ".well-known/security.txt"
+            "assets/css/styles.css"
+            "assets/js/app.js"
+            "assets/img/favicon.svg"
+            "assets/img/og-preview.svg"
+            "index.html"
+            "404.html"
+            "netlify.toml"
+            "_headers"
+            "robots.txt"
+            ".gitignore"
+            "README.md"
+          )
+          for item in "${REQUIRED_PATHS[@]}"; do
+            if [ ! -s "$item" ]; then
+              echo "::error file=$item::Required file '$item' is missing or empty."
+              exit 1
+            fi
+            echo "✔ Verified: $item"
+          done
+
+      - name: 2. Audit Netlify Forms (data-netlify="true" & hidden form-name inputs)
+        run: |
+          python3 - <<'EOF'
+          import re, sys, pathlib
+
+          for page in ["index.html"]:
+              html = pathlib.Path(page).read_text(encoding="utf-8")
+              forms = re.findall(r'<form\b[^>]*>.*?</form>', html, flags=re.DOTALL | re.IGNORECASE)
+              netlify_forms = [f for f in forms if re.search(r'data-netlify\s*=\s*["\']true["\']', f, re.I)]
+
+              if len(netlify_forms) < 1:
+                  print(f"ERROR: Expected at least 1 Netlify form in {page}, found {len(netlify_forms)}")
+                  sys.exit(1)
+
+              for form in netlify_forms:
+                  open_tag = re.match(r'<form\b[^>]*>', form, re.I).group(0)
+                  name_match = re.search(r'\bname\s*=\s*["\']([^"\']+)["\']', open_tag, re.I)
+                  if not name_match:
+                      print(f"ERROR: A data-netlify form in {page} is missing a 'name' attribute.")
+                      sys.exit(1)
+                  form_name = name_match.group(1)
+
+                  hidden_pattern = (
+                      r'<input\b[^>]*name\s*=\s*["\']form-name["\'][^>]*value\s*=\s*["\']'
+                      + re.escape(form_name)
+                      + r'["\']'
+                  )
+                  if not re.search(hidden_pattern, form, re.I):
+                      print(f"ERROR: Form '{form_name}' in {page} is missing matching hidden input <input type='hidden' name='form-name' value='{form_name}'>")
+                      sys.exit(1)
+
+                  print(f"✔ [{page}] Verified Netlify Form '{form_name}' with matching hidden form-name input.")
+          EOF
+
+      - name: 3. Audit A+ HTTP Security Headers in netlify.toml and _headers
+        run: |
+          python3 - <<'EOF'
+          import sys, pathlib
+
+          required_headers = [
+              "Strict-Transport-Security",
+              "Content-Security-Policy",
+              "X-Frame-Options",
+              "X-Content-Type-Options",
+              "Referrer-Policy",
+              "Permissions-Policy",
+          ]
+
+          for cfg in ["netlify.toml", "_headers"]:
+              content = pathlib.Path(cfg).read_text(encoding="utf-8")
+              for header in required_headers:
+                  if header not in content:
+                      print(f"ERROR: Missing security header '{header}' in {cfg}")
+                      sys.exit(1)
+              print(f"✔ All required security headers verified in {cfg}")
+          EOF
+
+      - name: 4. Verify all local CSS/JS/SVG asset references in HTML pages
+        run: |
+          python3 - <<'EOF'
+          import re, sys, pathlib
+
+          root = pathlib.Path(".")
+          html_files = ["index.html", "404.html"]
+          attr_pattern = re.compile(r'\b(?:href|src)\s*=\s*["\']([^"\']+)["\']', re.I)
+
+          for html_file in html_files:
+              content = (root / html_file).read_text(encoding="utf-8")
+              refs = attr_pattern.findall(content)
+              for ref in refs:
+                  if ref.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:")):
+                      continue
+                  clean_ref = ref.split("#")[0].split("?")[0].lstrip("/")
+                  if not clean_ref:
+                      continue
+                  target = root / clean_ref
+                  if not target.exists():
+                      print(f"ERROR: Broken local asset reference '{ref}' in {html_file} (expected '{target}')")
+                      sys.exit(1)
+                  print(f"✔ [{html_file}] Verified local path: {ref} -> {target}")
+          EOF
+
+      - name: 5. Verify RFC 9116 .well-known/security.txt fields
+        run: |
+          grep -q "^Contact:" .well-known/security.txt
+          grep -q "^Expires:" .well-known/security.txt
+          grep -q "^Canonical:" .well-known/security.txt
+          echo "✔ Verified RFC 9116 required fields in .well-known/security.txt"

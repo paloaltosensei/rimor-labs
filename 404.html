@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 // Uncharted Sector — RIMOR Labs</title>
+  <meta name="description" content="Requested resource not found. Return to RIMOR Labs main reconnaissance telemetry." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#090b14" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="error-page-body">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-cluster">
+        <a href="index.html" class="brand-logo" aria-label="RIMOR Labs Home">
+          <img src="assets/img/favicon.svg" alt="" width="34" height="34" class="brand-emblem" />
+          <span class="brand-wordmark">RIMOR <span class="brand-light">Labs</span></span>
+        </a>
+        <div class="status-pill">
+          <span class="signal-dot dot-crimson" aria-hidden="true"></span>
+          <span class="status-pill-text">TELEMETRY ALERT // HTTP 404 SECTOR NOT FOUND</span>
+        </div>
+      </div>
+      <a href="index.html" class="btn btn-outline btn-sm">Return to Base</a>
+    </div>
+  </header>
+
+  <main class="error-main">
+    <div class="hero-grid-backdrop" aria-hidden="true"></div>
+    <div class="container error-container">
+      <div class="error-card">
+        <div class="eyebrow-badge">
+          <span class="signal-dot dot-crimson" aria-hidden="true"></span>
+          <span>ERR::404_PROBE_OUT_OF_BOUNDS</span>
+        </div>
+
+        <h1 class="error-headline">
+          404 <span class="text-accent">// Uncharted Sector</span>
+        </h1>
+
+        <p class="error-lead">
+          Your reconnaissance probe reached coordinates outside our published perimeter. The requested endpoint has either been segmented, moved, or never existed.
+        </p>
+
+        <pre class="error-terminal-dump" aria-label="Diagnostic trace"><code>$ rimor-probe --verify-route
+[!] STATUS      : 404 NOT_FOUND
+[+] ENFORCEMENT : Zero-Trust Perimeter Policy Active
+[+] SUGGESTION  : Re-establish link to primary command node (/index.html)</code></pre>
+
+        <div class="error-actions">
+          <a href="index.html" class="btn btn-primary">
+            <span>Return to Primary Command</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="index.html#contact" class="btn btn-outline">
+            <span>Request Security Briefing</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIMOR Labs — Under Construction // Launching Soon</title>
+  <meta name="description" content="RIMOR Labs is currently under construction. Probe the interactive CLI for a sneak peek into our upcoming Offensive Security, Detection Engineering, Security Architecture, and Cyber Governance (NIS2 · ISO 27001 · vCISO) services." />
+  <meta name="theme-color" content="#090b14" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RIMOR Labs" />
+  <meta property="og:title" content="RIMOR Labs — Under Construction // Sneak Peek CLI" />
+  <meta property="og:description" content="Our full platform is in final deployment. Run a probe in the interactive CLI for a sneak peek at RIMOR Labs' offensive, defensive, architectural & governance capabilities." />
+  <meta property="og:image" content="assets/img/og-preview.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RIMOR Labs — Launching Soon" />
+  <meta name="twitter:description" content="Interactive recon canvas & CLI sneak peek. Offensive Security, Detection Engineering, Zero-Trust Architecture & NIS2/vCISO Governance." />
+  <meta name="twitter:image" content="assets/img/og-preview.svg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- Google Fonts: Bricolage Grotesque & Instrument Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="theme-v1">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- =====================================================================
+       A. MINIMALIST GLASS HEADER
+       ===================================================================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <div class="brand-cluster">
+        <a href="#top" class="brand-logo" aria-label="RIMOR Labs Home">
+          <!-- Subsurface Depth-Probe Emblem inspired by "rimor" (cleaving strata to probe hidden depths) -->
+          <svg class="brand-emblem" width="34" height="34" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M20 5H44L59 20V44L44 59H20L5 44V20L20 5Z" fill="#111528" stroke="currentColor" stroke-width="2.4" class="emblem-frame" />
+            <path d="M11 22H23L27 26M53 22H41L37 26" stroke="#9ca0ba" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" />
+            <path d="M13 31H22L26.5 35.5M51 31H42L37.5 35.5" stroke="#38bdf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 40H23.5L27.5 44M48 40H40.5L36.5 44" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="emblem-accent" />
+            <path d="M21 48C24 52.5 27.8 54.5 32 54.5C36.2 54.5 40 52.5 43 48" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2.5 2.5" />
+            <path d="M32 9V43" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="emblem-accent" />
+            <path d="M25 14L32 8L39 14" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M32 49L26.5 40.5H37.5L32 49Z" fill="#38bdf8" />
+            <circle cx="32" cy="45.5" r="2.8" fill="#eef0f8" />
+          </svg>
+          <span class="brand-wordmark">RIMOR <span class="brand-light">Labs</span></span>
+        </a>
+
+        <div class="status-pill status-pill-alert" aria-label="Build status">
+          <span class="signal-dot dot-crimson" aria-hidden="true"></span>
+          <span class="status-pill-text">BUILD 0.94-RC // SITE UNDER CONSTRUCTION</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="#sneak-peek" class="nav-chip-link">
+          <span class="signal-dot dot-cyan" aria-hidden="true"></span>
+          <span>rimor://sneak-peek</span>
+        </a>
+        <a href="#contact" class="btn btn-outline btn-sm">Early Access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =====================================================================
+         B. SHADOWOPSEU-INSPIRED "RECON FLASHLIGHT" HERO (UNDER CONSTRUCTION)
+         ===================================================================== -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-heading">
+      <!-- Ambient 56x56 tactical grid + mouse-tracked spotlight glow -->
+      <div class="hero-grid-backdrop" aria-hidden="true"></div>
+      <div class="hero-spotlight-glow" aria-hidden="true"></div>
+
+      <!-- Hidden Recon Layer revealed only when hovering with the mouse flashlight -->
+      <div class="recon-layer" id="reconLayer" aria-hidden="true">
+        <div class="recon-grid-intense"></div>
+
+        <div class="telemetry-node node-pos-1">
+          <span class="signal-dot dot-crimson"></span>
+          <code>[RED::OPS] adversary simulation, pentesting &amp; AI red teaming // incoming</code>
+        </div>
+
+        <div class="telemetry-node node-pos-2">
+          <span class="signal-dot dot-cyan"></span>
+          <code>[BLUE::ENG] sigma detection engineering &amp; SOC telemetry // staging</code>
+        </div>
+
+        <div class="telemetry-node node-pos-3">
+          <span class="signal-dot dot-violet"></span>
+          <code>[ARCH::ZERO] zero-trust, cloud &amp; AI security architecture // active</code>
+        </div>
+
+        <div class="telemetry-node node-pos-4">
+          <span class="signal-dot dot-emerald"></span>
+          <code>[GRC::EU] vCISO · NIS2 · DORA · ISO 27001 // ready</code>
+        </div>
+
+        <div class="telemetry-node node-pos-5">
+          <span class="signal-dot dot-crimson"></span>
+          <code>[BUILD 0.94-RC] platform deployment progress: ██████████░ 94%</code>
+        </div>
+
+        <div class="telemetry-node node-pos-6">
+          <span class="signal-dot dot-violet"></span>
+          <code>[HINT] run `sneak-peek` in the CLI below to unlock service intel</code>
+        </div>
+      </div>
+
+      <!-- Foreground Hero Content -->
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="eyebrow-badge">
+            <span class="signal-dot dot-crimson" aria-hidden="true"></span>
+            <span class="eyebrow-alert-text">BUILD 0.94-RC · SITE UNDER CONSTRUCTION</span>
+            <span class="eyebrow-divider" aria-hidden="true">//</span>
+            <span class="eyebrow-hint">HOVER WITH MOUSE FLASHLIGHT TO PROBE</span>
+          </div>
+
+          <h1 id="hero-heading" class="hero-headline">
+            Probing beneath the surface.
+            <span class="text-accent">Securing what matters.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Our full digital platform is currently under construction while we finalize our public release. Move your mouse across the canvas to illuminate hidden telemetry nodes, or interrogate our live reconnaissance CLI below for a sneak peek at what to expect from <strong>RIMOR Labs</strong>.
+          </p>
+
+          <!-- Clean Hero Action Row -->
+          <div class="hero-cta-row">
+            <a href="#sneak-peek" class="btn btn-primary">
+              <span>Explore CLI Sneak Peek</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Need Senior Support Now?</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         C. INTERACTIVE CLI SNEAK PEEK WORKBENCH (WHAT TO EXPECT FROM RIMOR LABS)
+         ===================================================================== -->
+    <section class="section" id="sneak-peek" aria-labelledby="sneak-peek-heading">
+      <div class="container">
+        <div class="section-header-compact">
+          <div class="eyebrow-row">
+            <span class="mono-tag tag-cyan">PRE-LAUNCH INTEL // INTERACTIVE CLI SNEAK PEEK</span>
+            <span class="build-progress-pill">
+              <span class="signal-dot dot-crimson" aria-hidden="true"></span>
+              <span>BUILD 0.94-RC // UNDER CONSTRUCTION (94%)</span>
+            </span>
+          </div>
+          <h2 id="sneak-peek-heading" class="section-title">
+            Don’t wait for launch day. Probe what we’re building via <code>rimor://cli</code>
+          </h2>
+          <p class="section-subtitle">
+            Click any incoming service module—or run commands directly in the terminal—to see what you can expect from RIMOR Labs as a service.
+          </p>
+        </div>
+
+        <div class="sneak-peek-workbench">
+          <!-- Left Column: 5 Incoming Service Modules (Interactive Triggers) -->
+          <div class="module-selector-col" role="tablist" aria-label="Incoming RIMOR Labs service modules">
+            <div class="module-col-header">
+              <span class="mono-tag">INCOMING SERVICE MODULES // CLICK TO PROBE</span>
+            </div>
+
+            <button
+              type="button"
+              class="module-trigger active"
+              role="tab"
+              aria-selected="true"
+              data-cmd="overview"
+            >
+              <span class="module-code">[00]</span>
+              <span class="module-info">
+                <span class="module-name">sneak-peek --all</span>
+                <span class="module-tag">Full pre-launch transmission &amp; roadmap</span>
+              </span>
+              <span class="module-status status-violet">PREVIEW</span>
+            </button>
+
+            <button
+              type="button"
+              class="module-trigger"
+              role="tab"
+              aria-selected="false"
+              data-cmd="offense"
+            >
+              <span class="module-code">[01]</span>
+              <span class="module-info">
+                <span class="module-name">Offensive Security &amp; Red Team</span>
+                <span class="module-tag">Pentesting · AI Red Teaming · Purple Team</span>
+              </span>
+              <span class="module-status status-crimson">STAGING</span>
+            </button>
+
+            <button
+              type="button"
+              class="module-trigger"
+              role="tab"
+              aria-selected="false"
+              data-cmd="defense"
+            >
+              <span class="module-code">[02]</span>
+              <span class="module-info">
+                <span class="module-name">Detection Engineering &amp; SOC</span>
+                <span class="module-tag">Sigma · YARA/KQL · MITRE ATT&amp;CK</span>
+              </span>
+              <span class="module-status status-cyan">STAGING</span>
+            </button>
+
+            <button
+              type="button"
+              class="module-trigger"
+              role="tab"
+              aria-selected="false"
+              data-cmd="architecture"
+            >
+              <span class="module-code">[03]</span>
+              <span class="module-info">
+                <span class="module-name">Zero-Trust, Cloud &amp; AI Architecture</span>
+                <span class="module-tag">SABSA/TOGAF · AWS/Azure/GCP · AI Guardrails</span>
+              </span>
+              <span class="module-status status-violet">STAGING</span>
+            </button>
+
+            <button
+              type="button"
+              class="module-trigger"
+              role="tab"
+              aria-selected="false"
+              data-cmd="governance"
+            >
+              <span class="module-code">[04]</span>
+              <span class="module-info">
+                <span class="module-name">vCISO, NIS2, ISO 27001 &amp; Risk</span>
+                <span class="module-tag">DORA · GDPR · CRISC Risk Quantification</span>
+              </span>
+              <span class="module-status status-emerald">READY</span>
+            </button>
+          </div>
+
+          <!-- Right Column: Interactive Recon Terminal -->
+          <div class="terminal-card" aria-label="Interactive RIMOR Labs Sneak Peek CLI">
+            <div class="terminal-window-bar">
+              <div class="window-dots" aria-hidden="true">
+                <span class="win-dot win-close"></span>
+                <span class="win-dot win-min"></span>
+                <span class="win-dot win-max"></span>
+              </div>
+              <div class="window-title">rimor://cli — sneak-peek@rimor-node (zsh)</div>
+              <div class="window-badge">BUILD 0.94-RC</div>
+            </div>
+
+            <!-- Quick Command Chips -->
+            <div class="terminal-chips-bar" role="group" aria-label="Quick terminal commands">
+              <span class="chips-label">PROBE:</span>
+              <button type="button" class="cmd-chip" data-cmd="overview">overview</button>
+              <button type="button" class="cmd-chip" data-cmd="offense">offense</button>
+              <button type="button" class="cmd-chip" data-cmd="defense">defense</button>
+              <button type="button" class="cmd-chip" data-cmd="architecture">architecture</button>
+              <button type="button" class="cmd-chip" data-cmd="governance">governance</button>
+              <button type="button" class="cmd-chip" data-cmd="nis2">nis2</button>
+              <button type="button" class="cmd-chip" data-cmd="eta">eta</button>
+              <button type="button" class="cmd-chip" data-cmd="help">help</button>
+              <button type="button" class="cmd-chip cmd-chip-muted" data-cmd="clear">clear</button>
+            </div>
+
+            <!-- Terminal Output Log -->
+            <div class="terminal-output" id="terminalOutput" role="log" aria-live="polite">
+              <div class="term-entry">
+                <div class="term-banner">RIMOR LABS // PRE-LAUNCH SNEAK-PEEK TERMINAL v0.94-RC</div>
+                <div class="term-muted">Public site is currently under construction. Type <span class="term-hl">'help'</span> or click any module to inspect incoming services.</div>
+              </div>
+            </div>
+
+            <!-- Terminal Command Input -->
+            <form class="terminal-input-form" id="terminalForm" autocomplete="off">
+              <label for="terminalInput" class="terminal-prompt">guest@rimor-preview:~$&nbsp;</label>
+              <input
+                type="text"
+                id="terminalInput"
+                class="terminal-input"
+                placeholder="Type a command (overview, offense, defense, architecture, governance, nis2, eta, clear)..."
+                aria-label="Terminal command input"
+                spellcheck="false"
+              />
+              <button type="submit" class="btn btn-sm btn-terminal-run">EXEC</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         D. EARLY ACCESS / PRIORITY BRIEFING DISPATCH (NETLIFY FORM)
+         ===================================================================== -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="early-access-shell">
+          <div class="early-access-intro">
+            <span class="mono-tag tag-emerald">EARLY ACCESS // PRE-LAUNCH DISPATCH</span>
+            <h2 id="contact-heading" class="section-title">
+              Need Senior Security Support Before We Officially Launch?
+            </h2>
+            <p class="contact-lead">
+              While the public portal is wrapping up construction, our founding practitioners are already taking on select early mandates across Red Teaming, Sigma Detection Engineering, Zero-Trust Cloud/AI Architecture, and NIS2 / ISO 27001 / vCISO advisory.
+            </p>
+
+            <div class="stealth-perks">
+              <div class="perk-pill">
+                <span class="signal-dot dot-crimson" aria-hidden="true"></span>
+                <span>Pentesting, Red Team &amp; AI Red Teaming</span>
+              </div>
+              <div class="perk-pill">
+                <span class="signal-dot dot-cyan" aria-hidden="true"></span>
+                <span>Sigma &amp; SOC Detection Engineering</span>
+              </div>
+              <div class="perk-pill">
+                <span class="signal-dot dot-violet" aria-hidden="true"></span>
+                <span>Zero-Trust, Cloud &amp; AI Security</span>
+              </div>
+              <div class="perk-pill">
+                <span class="signal-dot dot-emerald" aria-hidden="true"></span>
+                <span>vCISO · NIS2 · DORA · ISO 27001</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <div class="form-card-header">
+              <span class="mono-tag">DIRECT ENCRYPTED CHANNEL // PRIORITY QUEUE</span>
+              <span class="signal-dot dot-emerald" aria-hidden="true"></span>
+            </div>
+
+            <form
+              name="rimor-briefing"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="briefing-form"
+              id="rimorBriefingForm"
+              novalidate
+            >
+              <input type="hidden" name="form-name" value="rimor-briefing" />
+              <p class="sr-only" aria-hidden="true">
+                <label>Don’t fill this out if you’re human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+              </p>
+
+              <div class="form-row-two">
+                <div class="form-group">
+                  <label for="briefingName" class="form-label">Name <span class="req-star" aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="briefingName"
+                    name="name"
+                    class="input-field"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="briefingOrg" class="form-label">Organisation <span class="req-star" aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="briefingOrg"
+                    name="organisation"
+                    class="input-field"
+                    autocomplete="organization"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row-two">
+                <div class="form-group">
+                  <label for="briefingEmail" class="form-label">Work Email <span class="req-star" aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="briefingEmail"
+                    name="email"
+                    class="input-field"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="briefingInterest" class="form-label">What are you looking for? <span class="req-star" aria-hidden="true">*</span></label>
+                  <select id="briefingInterest" name="interest" class="input-field select-field" required>
+                    <option value="" disabled selected>Select incoming service...</option>
+                    <option value="Penetration Testing & Red Teaming">Penetration Testing &amp; Red Teaming</option>
+                    <option value="Detection Engineering">Detection Engineering</option>
+                    <option value="Security Architecture">Security Architecture</option>
+                    <option value="Cloud & AI Security">Cloud &amp; AI Security</option>
+                    <option value="vCISO & Governance / NIS2 / ISO 27001">vCISO &amp; Governance / NIS2 / ISO 27001</option>
+                    <option value="General Launch Notification">General Launch Notification</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="briefingMessage" class="form-label">Brief Note (Optional)</label>
+                <textarea
+                  id="briefingMessage"
+                  name="message"
+                  rows="3"
+                  class="input-field textarea-field"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block briefing-submit-btn">
+                <span>Request Early Access Briefing</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <div class="form-feedback" id="briefingFormFeedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       E. MINIMALIST FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-col">
+        <div class="footer-logo-row">
+          <img src="assets/img/favicon.svg" alt="" width="24" height="24" class="footer-emblem" />
+          <span class="brand-wordmark">RIMOR <span class="brand-light">Labs</span></span>
+        </div>
+        <p class="footer-copy">
+          © <span id="currentYear">2026</span> RIMOR Labs. Offensive, Defensive, Architectural &amp; Governance Security.
+        </p>
+      </div>
+
+      <div class="footer-posture-col">
+        <div class="posture-badges">
+          <button type="button" class="posture-pill posture-pill-btn" id="pgpModalOpenBtn" aria-haspopup="dialog" aria-controls="pgpModal">
+            <span class="signal-dot dot-violet" aria-hidden="true"></span>
+            <span>PGP: 9F4A 8C2E 7D11 B503</span>
+          </button>
+
+          <a href="#contact" class="posture-pill">
+            <span class="signal-dot dot-cyan" aria-hidden="true"></span>
+            <span>security@rimorlabs.eu</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PGP Fingerprint Modal -->
+  <div class="modal-backdrop" id="pgpModal" role="dialog" aria-modal="true" aria-labelledby="pgpModalTitle" hidden>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <span class="mono-tag tag-violet">CRYPTOGRAPHIC IDENTITY // PGP KEY</span>
+        <button type="button" class="modal-close-btn" id="pgpModalCloseBtn" aria-label="Close PGP modal">✕</button>
+      </div>
+      <h3 id="pgpModalTitle" class="modal-title">RIMOR Labs Security &amp; Disclosure Key</h3>
+      <p class="modal-desc">
+        Use the following OpenPGP fingerprint to verify signed advisories or encrypt sensitive briefing materials sent to <code>security@rimorlabs.eu</code>.
+      </p>
+      <div class="pgp-fingerprint-box">
+        <code id="pgpFingerprintText">9F4A 8C2E 7D11 B503 4E9A  1C88 B205 D7E4 C901 3FA2</code>
+        <button type="button" class="btn btn-sm btn-outline" id="copyPgpBtn">Copy Fingerprint</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

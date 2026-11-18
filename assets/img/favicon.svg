@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="RIMOR Labs — Subsurface Depth Probe Emblem">
+  <defs>
+    <linearGradient id="rimorBg" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#151a30" />
+      <stop offset="100%" stop-color="#080a12" />
+    </linearGradient>
+    <linearGradient id="rimorBeam" x1="32" y1="8" x2="32" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="55%" stop-color="#8b6cff" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <radialGradient id="rimorCoreGlow" cx="50%" cy="72%" r="36%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.55" />
+      <stop offset="60%" stop-color="#8b6cff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#090b14" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Precision Octagonal Frame -->
+  <path d="M20 5H44L59 20V44L44 59H20L5 44V20L20 5Z" fill="url(#rimorBg)" stroke="#2a3158" stroke-width="2" />
+
+  <!-- Subsurface Core Illumination -->
+  <circle cx="32" cy="45" r="18" fill="url(#rimorCoreGlow)" />
+
+  <!-- Three Parted Surface Strata Layers ("Rimor" = cleaving open the surface) -->
+  <!-- Top Stratum -->
+  <path d="M11 22H23L27 26M53 22H41L37 26" stroke="#9ca0ba" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" />
+  <!-- Middle Stratum -->
+  <path d="M13 31H22L26.5 35.5M51 31H42L37.5 35.5" stroke="#38bdf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" />
+  <!-- Deep Stratum -->
+  <path d="M16 40H23.5L27.5 44M48 40H40.5L36.5 44" stroke="#8b6cff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Sonar Depth Arcs Beneath the Strata -->
+  <path d="M21 48C24 52.5 27.8 54.5 32 54.5C36.2 54.5 40 52.5 43 48" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2.5 2.5" />
+
+  <!-- Central Vertical Probe Spearhead Piercing the Depths -->
+  <path d="M32 9V43" stroke="url(#rimorBeam)" stroke-width="3" stroke-linecap="round" />
+  <path d="M25 14L32 8L39 14" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Probe Wedge Tip -->
+  <path d="M32 49L26.5 40.5H37.5L32 49Z" fill="url(#rimorBeam)" />
+
+  <!-- Uncovered Hidden Core Node -->
+  <circle cx="32" cy="45.5" r="3" fill="#eef0f8" />
+  <circle cx="32" cy="14" r="2" fill="#38bdf8" />
+</svg>
